@@ -1,7 +1,7 @@
-/* ORM FOLDER ========================================
-We abstract our database and information-modelling code
-into this section
-====================================================== */
+// /* ORM FOLDER ========================================
+// We abstract our database and information-modelling code
+// into this section
+// ====================================================== */
 
 const db = require( '../config/connection.js' )
 // an external npm package we are using

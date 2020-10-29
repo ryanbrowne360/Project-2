@@ -1,11 +1,10 @@
-DROP DATABASE tasks;
-CREATE DATABASE tasks;
-USE tasks;
+DROP DATABASE CHAT_DATA;
+CREATE DATABASE CHAT_DATA;
+USE CHAT_DATA;
 
-CREATE TABLE tasks (
+CREATE TABLE chatlogs(
     `id` INTEGER AUTO_INCREMENT PRIMARY KEY,
-    `priority` ENUM('danger','primary','secondary') DEFAULT 'primary', /* using bootstrap class as priority colouring */
-    `info` VARCHAR(255) NOT NULL,
-    `due` TIMESTAMP DEFAULT NULL,
+    'username' VARCHAR (35),
+    `message` VARCHAR(500) NOT NULL,
     `createdAt` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )
