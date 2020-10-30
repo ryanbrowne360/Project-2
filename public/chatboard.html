@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <main>
+    <div class="chats">
+      <div class="chatter">
+      </div>
+    
+    <div class="makeChat">
+      <textarea id="chatting" rows="1" placeholder="chat away!"></textarea>
+      <button>SEND</button>
+    </div>
+  </div>
+  </main>
+</body>
+</html>
+<style>
+    .chats {
+        height: 700px;
+        width: 600px;
+        background-color: pink;
+        position: relative;
+    }
+    .chatter {
+        height: 600px;
+        width: 500px;
+        background-color: white;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .makeChat {
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+    }
+    #chatting {
+        width: 400px;
+    }
+
+</style>

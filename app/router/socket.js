@@ -15,7 +15,7 @@ function socket(http) {
     });
 }
 
-modules.export = socket
+module.exports = socket
 
 
 
