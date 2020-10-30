@@ -4,13 +4,16 @@
 // ====================================================== */
 
 const db = require( '../config/connection.js' )
-// an external npm package we are using
-//const moment = require('moment')
+
 
 
 // function getList( criteria={} ){
 //     return db.query( 'SELECT * FROM tasks '+( criteria ? 'WHERE ? ' : '' ), criteria )
 // }
+function getData(){
+    return db.query( 'SELECT * FROM chatlogs');
+}
+
 
 // function insertTask( priority, info, due ){
 //     if( priority === '' ) {
@@ -34,6 +37,6 @@ const db = require( '../config/connection.js' )
 //     return db.query( 'DELETE FROM tasks WHERE id=?', [ id ] )
 // }
 
-// module.exports = {
-//     getList, insertTask, updateTask, deleteTask
-// }
+module.exports = {
+    getData
+}

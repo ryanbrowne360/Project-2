@@ -8,9 +8,11 @@ router folder
 const orm = require('../models/orm');
 
 function router(app) {
-    app.get('/', (req, res) => {
-        res.send('Hello World')
-        console.log(res.send)
+    app.get('/api/data', async (req, res) => {
+        const result = await orm.getData()
+        console.log(result)
+        res.send(result)
+
 
         // res.sendFile(__dirname + '/index.html')
     });
