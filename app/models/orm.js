@@ -14,7 +14,13 @@ function getData(){
     return db.query( 'SELECT * FROM chatlogs');
 }
 
+function insertMsg(msg){
+    return db.query(`INSERT INTO chatlogs (message) VALUES (?)`,[msg])
+}
 
+function getMsg(){
+    return db.query('SELECT (message) FROM chatlogs')
+}
 // function insertTask( priority, info, due ){
 //     if( priority === '' ) {
 //         priority = 'primary'
@@ -38,5 +44,5 @@ function getData(){
 // }
 
 module.exports = {
-    getData
+    getData, insertMsg, getMsg
 }
