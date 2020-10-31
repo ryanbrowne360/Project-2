@@ -15,11 +15,15 @@ function getData(){
 }
 
 function insertMsg(msg){
-    return db.query(`INSERT INTO chatlogs (message) VALUES (?)`,[msg])
+    return db.query('INSERT INTO chatlogs (message) VALUES (?)',[msg])
 }
 
 function getMsg(){
     return db.query('SELECT (message) FROM chatlogs')
+}
+
+function getUsers(){
+    return db.query('SELECT (username) FROM users')
 }
 // function insertTask( priority, info, due ){
 //     if( priority === '' ) {

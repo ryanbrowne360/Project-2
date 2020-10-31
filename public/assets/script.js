@@ -10,13 +10,17 @@
 
 $(async function () {
     const list = await fetch( '/saved').then( r=>r.json() )
-    const list2 = JSON.parse(list)
-    list2.forEach(el=>$('#messages').append($('<li>').text(el)))
+
+    list.forEach(el=>{
+        $('#messages').append($('<li>').text(el.message));
+        console.log(el); 
+    })
 
     const result = await fetch('/api/data')
         .then(r=>r.json())
     console.log('result: ',result)
-    var socket = io();
+
+    var socket = io('/my-namespace');
     $('form').submit(async function(e) {
         e.preventDefault();
         socket.emit('chat message', $('#m').val());
